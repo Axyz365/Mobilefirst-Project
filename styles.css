@@ -133,12 +133,17 @@ main {
 /* Table container */
 .main-tables-container {
     display: flex;
-    flex-direction: column;
+    overflow-x: scroll;
+    margin: 52px auto;
+    padding: 0 24px;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
 }
 .tables-container, .tables-container2 {
-    width: 250px;
+    scroll-snap-align: center;
+    min-width: 240px;
     height: 290px;
-    margin: 0 auto 24px auto;
+    margin: 12px 12px;
     padding: 12px 0 0 0;
     font-family: 'Inter', sans-serif;
     border-radius: 15px;
@@ -256,7 +261,7 @@ main {
     width: 100%;
     min-width: 320px;
     height: 50vh;
-    background-image: url('./assets/img/bitcoinbaby2x.jpg');
+    background-image: url('./assets/img/litebitcoinbaby.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -407,11 +412,4 @@ footer .left ul {
 .left a {
     text-decoration: none;
     color: var(--just-white);
-}
-
-
-@media (min-width: 520px) { 
-    .main-tables-container {
-        flex-direction: row;
-    }
 }
